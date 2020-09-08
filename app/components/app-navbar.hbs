@@ -1,0 +1,36 @@
+<BsNavbar
+        @type="dark"
+        @backgroundColor="danger"
+        @collapsed={{true}}
+        @onCollapse={{action (mut collapsed) true}}
+        @onExpand={{action (mut collapsed) false}} as |navbar|>
+  <div class="navbar-header">
+    {{navbar.toggle}}
+    {{#link-to "index" class="navbar-brand"}}BootstrapTest{{/link-to}}
+  </div>
+  <navbar.content>
+    <navbar.nav as |nav|>
+      <nav.item>
+        <nav.link-to @route="sign_in">Sign In</nav.link-to>
+      </nav.item>
+      <nav.item>
+        <nav.link-to @route="sign_up">Sign Up</nav.link-to>
+      </nav.item>
+
+      <nav.dropdown as |dd|>
+        <dd.toggle>Dropdown <span class="caret"></span></dd.toggle>
+        <dd.menu as |ddm|>
+          <ddm.item>
+            <ddm.link-to @route="index">Home</ddm.link-to>
+          </ddm.item>
+          <ddm.item>
+            <ddm.link-to @route="sign_in">Sign In</ddm.link-to>
+          </ddm.item>
+          <ddm.item>
+            <ddm.link-to @route="sign_up">Sign Up</ddm.link-to>
+          </ddm.item>
+        </dd.menu>
+      </nav.dropdown>
+    </navbar.nav>
+  </navbar.content>
+</BsNavbar>
