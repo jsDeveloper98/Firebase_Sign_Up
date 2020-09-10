@@ -2,6 +2,14 @@
 
 module.exports = function(environment) {
   let ENV = {
+    firebase: {
+      apiKey: "AIzaSyBPndAxBJI3tsJ47_NiIPysz8V6YBIs1h8",
+      authDomain: "intro-to-firebase-11af8.firebaseapp.com",
+      databaseURL: "https://intro-to-firebase-11af8.firebaseio.com",
+      projectId: "intro-to-firebase-11af8",
+      storageBucket: "intro-to-firebase-11af8.appspot.com",
+      messagingSenderId: "255465018867",
+    },
     modulePrefix: 'project-1',
     environment,
     rootURL: '/',
