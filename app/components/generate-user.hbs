@@ -1,13 +1,13 @@
 <div>
   <div>
-    <Input @value={{this.name}} placeholder="Enter Your Name"/>
+    <Input @value={{this.email}} placeholder="Enter Your Name"/>
   </div>
   <div>
-    <Input @value={{this.pass}} placeholder="Enter Your Password"/>
+    <Input @value={{this.password}} type='password' placeholder="Enter Your Password"/>
   </div>
-  <div>
+  {{!-- <div>
     <Input @value={{this.passRepeat}} placeholder="Repeat Your Password"/>
-  </div>
+  </div> --}}
   <div>
     <button {{action "createUser"}}>Submit</button>
   </div>
